@@ -115,15 +115,19 @@ const SubscribedPosts = () => {
                 data.map(item => {
                     return (
                         <div className="card home-card">
-                            <h5>
-                                <Link to={item.postedBy._id !== state._id?"/profile/"+item.postedBy._id :"/profile"  }>
+                            <div className="post-header">
+                            <div>
+                                <img className="postedBy-image" src={item.postedBy.pic}></img>
+                            </div>
+                                <div className="postedBy-name">
+                                    <Link to={item.postedBy._id !== state._id?"/profile/"+item.postedBy._id :"/profile"  }>
                                     {item.postedBy.name}
-                                </Link>
-                                {item.postedBy._id===state._id?
-                                    <i className="material-icons delete-post-icon" onClick={() => deletePost(item._id)}>delete</i> 
-                                    :null
-                                }
-                            </h5>
+                                    </Link>
+                                </div>
+
+                                
+        
+                            </div>
                             <div className="card card-image">
                                 <img src={item.url} />
                             </div>

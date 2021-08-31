@@ -116,7 +116,7 @@ router.delete('/api/delete/:postId',requireLogin,(req,res)=>{
 
 router.get('/api/subposts', requireLogin, (req, res) => {
     Post.find({postedBy: {$in: req.user.following}})
-        .populate('postedBy', '_id name')
+        .populate('postedBy', '_id name pic')
         .populate('comments.postedBy', '_id name pic')
         .sort('-createdAt')
         .then(posts => {

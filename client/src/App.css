@@ -65,6 +65,9 @@ input[type=text]:focus {
     margin: 30px;
 }
 
+.card-content{
+    padding: 10px 20px 20px;
+}
 .input-filled{
     max-width: 500px;
     margin: 10px auto;
@@ -79,14 +82,18 @@ input[type=text]:focus {
     right:50px !important;
 }
 
-.delete-post-icon{
-    float: right;
+
+
+.delete-post{
+    margin-left: auto;
+    margin-right: 0;
+    padding:7px;
 }
 
 .post-header{
-    display: inline-flex;
+    display: flex;
     font-size: 1.15rem;
-    padding: 10px;
+    padding: 10px 10px 0;
 }
 
 .postedBy-image{

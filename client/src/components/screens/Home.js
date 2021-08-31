@@ -120,9 +120,13 @@ const Home = () => {
                                 <img className="postedBy-image" src={item.postedBy.pic}></img>
                             </div>
                             <div className="postedBy-name">
+                                
                                 <Link to={item.postedBy._id !== state._id?"/profile/"+item.postedBy._id :"/profile"  }>
                                     {item.postedBy.name}
                                 </Link>
+                          
+                            </div>
+                            <div className="delete-post">
                                 {item.postedBy._id===state._id?
                                     <i className="material-icons delete-post-icon" onClick={() => deletePost(item._id)}>delete</i> 
                                     :null
